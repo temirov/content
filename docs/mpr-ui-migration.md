@@ -2,7 +2,7 @@
 
 I001 prepares the CTX documentation page for mpr-ui I009.
 The application source starts at `0f7beb749860091637e417ec8d17146da489c9b5`.
-The shared candidate is `7c2f9e36453c6081db7641b7efae00c6e271fa39`.
+The shared candidate is `768f25936497c5aabd426197d21c2100b6e5d9a1`.
 Its SHA-256 values are defined in `tests/shared-ui-candidate.mjs`.
 
 ## Release Unit
@@ -31,7 +31,10 @@ Use `npm ci` to install the browser test dependencies and Chromium.
 Use `make test-browser` for the focused checks.
 Use `make ci` for formatting, Go vet, Go tests, and browser checks.
 The documentation workflow runs the same browser target for page, test, dependency, and workflow changes.
-Final local `make ci` passed formatting, Go vet, all Go tests, and both browser checks.
+Final B069 local `make ci` passed formatting, Go vet, all Go tests, and both browser checks.
+The log is `/tmp/ctx-i001-b069-ci.log`.
+Local CI includes the separate telemetry and governance changes in the primary checkout.
+Hosted CI qualifies the committed migration source separately.
 Hosted browser CI passed at `d38791cea7a2d2b892f7f785274503dd62bedd75`.
 The [hosted run](https://github.com/tyemirov/ctx/actions/runs/34302289256) uses the same browser target.
 

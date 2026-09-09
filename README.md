@@ -202,3 +202,10 @@ ctx callchain github.com/tyemirov/ctx/internal/commands.GetContentData --depth 2
 ## License
 
 ctx is released under the [MIT License](MIT-LICENSE).
+
+## Documentation Browser Checks
+
+Run `npm ci` to install the test dependencies and Chromium.
+Run `make test-browser` to verify the real documentation footer at mobile and desktop widths.
+Run `make ci` for Go validation and browser checks.
+See the [shared UI migration](docs/mpr-ui-migration.md) for candidate identity and publication gates.

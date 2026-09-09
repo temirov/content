@@ -1,0 +1,42 @@
+name: Documentation browser checks
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - docs/index.html
+      - tests/docs-ui.test.mjs
+      - tests/shared-ui-candidate.mjs
+      - package.json
+      - package-lock.json
+      - Makefile
+      - .github/workflows/docs-ui.yml
+  push:
+    branches: [master]
+    paths:
+      - docs/index.html
+      - tests/docs-ui.test.mjs
+      - tests/shared-ui-candidate.mjs
+      - package.json
+      - package-lock.json
+      - Makefile
+      - .github/workflows/docs-ui.yml
+
+jobs:
+  docs-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - uses: browser-actions/setup-chrome@v1
+        id: chrome
+        with:
+          chrome-version: stable
+      - run: make test-browser
+        env:
+          PUPPETEER_EXECUTABLE_PATH: ${{ steps.chrome.outputs.chrome-path }}

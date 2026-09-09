@@ -32,7 +32,8 @@ Use `make test-browser` for the focused checks.
 Use `make ci` for formatting, Go vet, Go tests, and browser checks.
 The documentation workflow runs the same browser target for page, test, dependency, and workflow changes.
 Final local `make ci` passed formatting, Go vet, all Go tests, and both browser checks.
-Hosted CI remains pending.
+Hosted browser CI passed at `d38791cea7a2d2b892f7f785274503dd62bedd75`.
+The [hosted run](https://github.com/tyemirov/ctx/actions/runs/34302289256) uses the same browser target.
 
 ## Publication And Acceptance
 

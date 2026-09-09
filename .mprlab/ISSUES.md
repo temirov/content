@@ -19,10 +19,9 @@
   - Both browser regressions failed before the footer change and passed after it.
   - Final local CI passed formatting, Go vet, Go tests, and both browser checks.
   Blocked:
-  - Hosted CI remains pending.
+  - Hosted browser CI passed at `d38791cea7a2d2b892f7f785274503dd62bedd75` in run `34302289256`.
   - Publication preparation requires the Pages resource, release identity, and maintenance artifact.
   - Shared publication, cache transition, and public acceptance remain pending.
-
 
 ## Maintenance
 

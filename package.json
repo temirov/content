@@ -1,0 +1,10 @@
+{
+  "name": "ctx-documentation-tests",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/docs-ui.test.mjs"
+  },
+  "devDependencies": {
+    "puppeteer": "25.10.0"
+  }
+}
